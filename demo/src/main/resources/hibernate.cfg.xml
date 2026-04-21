@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+ "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+ <session-factory>
+
+  <!-- DB connection -->
+  <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/car_db</property>
+  <property name="hibernate.connection.username">hiber_user</property>
+  <property name="hibernate.connection.password">hiber@123</property>
+
+  <!-- SQL -->
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.show_sql">true</property>
+
+  <!-- mapping -->
+  <mapping class="com.example.Car"/>
+
+ </session-factory>
+</hibernate-configuration>
